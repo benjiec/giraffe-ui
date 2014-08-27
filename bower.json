@@ -4,7 +4,7 @@
   "main": [
     "./js/analyze.js",
     "./js/bio.js",
-    "./js/draw.js",
+    "./js/draw.js"
   ],
   "ignore": [ '.gitignore' ],
   "dependencies": {}
