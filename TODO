@@ -1,0 +1,9 @@
+Add tests
+  - JS accounts for EarI across boundary or before boundary but cut site afterward
+  - JS accounts for cutter across boundary in N-cutter analysis
+  - JS reports EarI at start and elsewhere as two cutter
+  - JS expects alignment match to include | for match, empty space for mismatch
+  - JS test to show we list in frame tags with ORF
+  - JS test linear mode specifies circular boundary ORFs
+  - JS test digest working correctly with cutter positions, incl EarI
+  - JS test for layer control - e.g. Restriction Enzyme

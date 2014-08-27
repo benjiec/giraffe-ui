@@ -1,0 +1,11 @@
+{
+  "name": "giraffe-ui",
+  "version": "3.0",
+  "main": [
+    "./js/analyze.js",
+    "./js/bio.js",
+    "./js/draw.js",
+  ],
+  "ignore": [ '.gitignore' ],
+  "dependencies": {}
+}
