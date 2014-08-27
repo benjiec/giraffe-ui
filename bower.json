@@ -6,6 +6,6 @@
     "./js/bio.js",
     "./js/draw.js"
   ],
-  "ignore": [ '.gitignore' ],
+  "ignore": [ ".gitignore" ],
   "dependencies": {}
 }
