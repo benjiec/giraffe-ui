@@ -9,7 +9,7 @@
  */
 (function(){
   window.ScaleRaphael = function(container, width, height){
-    var wrapper = document.getElementById(container);
+    var wrapper = container;
     if (!wrapper.style.position) wrapper.style.position = "relative";
     wrapper.style.width = width + "px";
     wrapper.style.height = height + "px";

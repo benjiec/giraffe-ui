@@ -654,10 +654,12 @@ window.GiraffeDraw2 = function () {
             }
 
             // Where to draw the map
-            thi$.map_dom_id = 'giraffe-draw-map';
-            if ('map_dom_id' in options) {
-                thi$.map_dom_id = options.map_dom_id;
-            }
+            if ('map_dom_id' in options)
+                thi$.el = document.getElementById(options.map_dom_id);
+            else if ('map_dom' in options)
+                thi$.el = options.map_dom;
+            else
+                thi$.el = document.getElementById('giraffe-draw-map');
 
             thi$.paper  = undefined; // To be used for RaphaelJS;
             thi$.label_offset = 0;
@@ -835,17 +837,9 @@ window.GiraffeDraw2 = function () {
         };
 
         thi$.clear = function () {
-            var map_dom,
-                kids,
-                kx;
-
-            // Since we don't want to depend on jQuery, use the raw DOM (ugh!)
-            map_dom = document.getElementById(this.map_dom_id);
-            kids = map_dom.childNodes;
-
-            for (kx = 0; kx < kids.length; kx++) {
-                map_dom.removeChild(kids[kx]);
-            }
+            var kids, kx;
+            kids = thi$.el.childNodes;
+            for (kx = 0; kx < kids.length; kx++) { thi$.el.removeChild(kids[kx]); }
         };
 
         thi$.redraw = function (recalc) {
@@ -889,7 +883,7 @@ window.GiraffeDraw2 = function () {
 
             this.set_bounding_box();
 
-            this.paper = ScaleRaphael(this.map_dom_id, this.width, this.height); // global
+            this.paper = ScaleRaphael(this.el, this.width, this.height); // global
             this.initialize_features();
 
             this.draw_plasmid();
@@ -1714,10 +1708,12 @@ window.GiraffeDraw2 = function () {
         var plasmid_right = plasmid_left + plasmid_width;
 
         // Where to draw the map
-        thi$.map_dom_id = 'giraffe-draw-map';
-        if ('map_dom_id' in options) {
-            thi$.map_dom_id = options.map_dom_id;
-        }
+        if ('map_dom_id' in options)
+            thi$.el = document.getElementById(options.map_dom_id);
+        else if ('map_dom' in options)
+            thi$.el = options.map_dom;
+        else
+            thi$.el = document.getElementById('giraffe-draw-map');
 
         // Heights of levels
         var y_spacing = 20; // spacing
