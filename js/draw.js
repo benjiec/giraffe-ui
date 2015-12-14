@@ -546,7 +546,6 @@ window.GiraffeDraw2 = function () {
         // Automatically provide the cut site in cutter labels
         thi$.label_name = function () {
             var label_name = this.label();
-            if (label_name.length > 20) { label_name = label_name.substring(0,20)+"..."; }
             if (this.type() == ft.enzyme && this.actually_have_cut()) {
                 label_name += " (" + this.cut() + ")";
             }
