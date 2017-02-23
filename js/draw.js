@@ -360,9 +360,11 @@ window.GiraffeDraw2 = function () {
                     break;
                 case ft.custom3:
                     thi$.color = colors.custom3;
+                    thi$.draw_head = true;
                     break;
                 case ft.custom4:
                     thi$.color = colors.custom4;
+                    thi$.draw_head = true;
                     break;
                 case ft.terminator:
                     thi$.color = colors.primer;
