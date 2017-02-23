@@ -1603,7 +1603,7 @@ window.GiraffeDraw2 = function () {
             // this to compute height of label lists. These are
             // conservative.
             label_letter_height = 15;
-            label_letter_width = 12;
+            label_letter_width = 8;
 
             var min_x = thi$.width/2;
             var max_x = thi$.width/2;
