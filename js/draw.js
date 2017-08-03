@@ -371,6 +371,7 @@ window.GiraffeDraw2 = function () {
                     thi$.color = colors.origin;
                     break;
                 case ft.enzyme:
+                    thi$.draw_head = false;
                     thi$.color = colors.enzyme;
                     thi$.width = map.enzyme_width();
                     thi$.opacity = map.enzyme_opacity();
