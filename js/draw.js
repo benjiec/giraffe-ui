@@ -338,7 +338,7 @@ window.GiraffeDraw2 = function () {
         // Defaults
         thi$.color = colors.feature;
         thi$.width = map.feature_width();
-        thi$.draw_head = false;
+        thi$.draw_head = true;
         thi$.opacity = map.feature_opacity();
         thi$.opaque = false; // holds opacity for clicks
         set_properties();
@@ -349,7 +349,6 @@ window.GiraffeDraw2 = function () {
             switch(thi$.type()) {
                 case ft.promoter:
                 case ft.primer:
-                    thi$.draw_head = true;
                     thi$.color = colors.primer;
                     break;
                 case ft.custom:
@@ -360,11 +359,9 @@ window.GiraffeDraw2 = function () {
                     break;
                 case ft.custom3:
                     thi$.color = colors.custom3;
-                    thi$.draw_head = true;
                     break;
                 case ft.custom4:
                     thi$.color = colors.custom4;
-                    thi$.draw_head = true;
                     break;
                 case ft.terminator:
                     thi$.color = colors.primer;
@@ -380,10 +377,8 @@ window.GiraffeDraw2 = function () {
                     break;
                 case ft.orf:
                     thi$.color = colors.orf;
-                    thi$.draw_head = true;
                     break;
                 case ft.gene:
-                    thi$.draw_head = true;
                     break;
                 default:
                     break;

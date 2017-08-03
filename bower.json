@@ -1,6 +1,6 @@
 {
   "name": "giraffe-ui",
-  "version": "3.0",
+  "version": "3.1",
   "main": [
     "./js/analyze.js",
     "./js/bio.js",
