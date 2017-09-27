@@ -1809,7 +1809,7 @@ window.GiraffeDraw2 = function () {
 
                 // Don't draw features that cross the boundary, as this is not
                 // a circular plasmid
-                if (! this.visible || this.crosses_boundary()) { return; }
+                if (!this.visible || !this.enzyme_visible || this.crosses_boundary()) { return; }
 
                 // Convert from sequence positions to x-coords
                 x0 = convert.pos_to_x(this.start());
@@ -1882,7 +1882,9 @@ window.GiraffeDraw2 = function () {
 
             // Should we draw the label?
             thi$.should_draw_label = function () {
-                return this.visible && this.labeled && !this.crosses_boundary();
+                if (!this.visible || !this.enzyme_visible || !this.labeled || this.crosses_boundary())
+                  return false;
+                return true;
             }; // END LinearFeature::should_draw_label()
 
             thi$.label_size = function() {
